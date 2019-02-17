@@ -3,6 +3,7 @@ package com.Parking_pages;
 import static org.testng.Assert.assertEquals;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -38,9 +39,9 @@ public class Parking_Calculator extends Base {
 	}
 
 	@Test(dataProvider = "parkingcalculator")
-	public void dataDrivenTest(String lot, String eTime, String eDate, String xTime, String xDate, String expacted) {
+	public void dataDrivenTest(String lot, String eTime, String eDate, String xTime, String xDate, String actuleResult) {
 
-		try {
+		try {  
 
 			counter++;
 			myRepository.selectDropDownVisibleText(By.id("Lot"), lot);
@@ -50,9 +51,13 @@ public class Parking_Calculator extends Base {
 			myRepository.clickButton(By.id("ExitTime"));
 			myRepository.enterTextField(By.id("ExitDate"), xDate);
 			myRepository.clickButton(By.cssSelector("input[name=Submit]"));
+			WebElement amountVerfing = driver.findElement(By.cssSelector("span[class='SubHead']"));
+			String totalCostIs = amountVerfing.getText();
+			System.out.println("Test Senario:" +counter+ ", Total Parking Amount is:"+totalCostIs);
+			assertEquals(actuleResult, totalCostIs);
+
 			Thread.sleep(2000);
-		
-		
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
