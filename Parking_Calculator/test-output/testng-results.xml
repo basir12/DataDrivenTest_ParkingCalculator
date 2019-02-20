@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="0" failed="6" skipped="0">
+<testng-results skipped="2" failed="4" ignored="0" total="6" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2019-02-15T17:35:09Z" name="Default suite" finished-at="2019-02-15T17:36:31Z" duration-ms="82011">
+  <suite name="Default suite" duration-ms="62557" started-at="2019-02-20T16:41:12Z" finished-at="2019-02-20T16:42:14Z">
     <groups>
     </groups>
-    <test started-at="2019-02-15T17:35:09Z" name="Default test" finished-at="2019-02-15T17:36:31Z" duration-ms="82011">
+    <test name="Default test" duration-ms="62557" started-at="2019-02-20T16:41:12Z" finished-at="2019-02-20T16:42:14Z">
       <class name="com.Parking_pages.Parking_Calculator">
-        <test-method is-config="true" signature="beforeAllTestStart()[pri:0, instance:com.Parking_pages.Parking_Calculator@576d5deb]" started-at="2019-02-15T12:35:09Z" name="beforeAllTestStart" finished-at="2019-02-15T12:35:09Z" duration-ms="18" status="PASS">
+        <test-method status="PASS" signature="beforeAllTestStart()[pri:0, instance:com.Parking_pages.Parking_Calculator@731a74c]" name="beforeAllTestStart" is-config="true" duration-ms="17" started-at="2019-02-20T11:41:12Z" finished-at="2019-02-20T11:41:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeAllTestStart -->
-        <test-method is-config="true" signature="beforeEachTestStart()[pri:0, instance:com.Parking_pages.Parking_Calculator@576d5deb]" started-at="2019-02-15T12:35:09Z" name="beforeEachTestStart" finished-at="2019-02-15T12:35:14Z" duration-ms="4435" status="PASS">
+        <test-method status="PASS" signature="beforeEachTestStart()[pri:0, instance:com.Parking_pages.Parking_Calculator@731a74c]" name="beforeEachTestStart" is-config="true" duration-ms="5150" started-at="2019-02-20T11:41:12Z" finished-at="2019-02-20T11:41:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeEachTestStart -->
-        <test-method is-config="true" signature="parking_Calculator()[pri:0, instance:com.Parking_pages.Parking_Calculator@576d5deb]" started-at="2019-02-15T12:35:14Z" name="parking_Calculator" finished-at="2019-02-15T12:35:15Z" duration-ms="636" status="PASS">
+        <test-method status="PASS" signature="parking_Calculator()[pri:0, instance:com.Parking_pages.Parking_Calculator@731a74c]" name="parking_Calculator" is-config="true" duration-ms="894" started-at="2019-02-20T11:41:17Z" finished-at="2019-02-20T11:41:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- parking_Calculator -->
-        <test-method signature="dataDrivenTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.Parking_pages.Parking_Calculator@576d5deb]" started-at="2019-02-15T12:35:15Z" name="dataDrivenTest" data-provider="parkingcalculator" finished-at="2019-02-15T12:35:16Z" duration-ms="1244" status="FAIL">
+        <test-method status="FAIL" signature="dataDrivenTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.Parking_pages.Parking_Calculator@731a74c]" name="dataDrivenTest" duration-ms="30206" started-at="2019-02-20T11:41:18Z" data-provider="parkingcalculator" finished-at="2019-02-20T11:41:48Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[Economy Parking]]>
+                <![CDATA[ Economy Parking]]>
               </value>
             </param>
             <param index="1">
@@ -54,21 +54,20 @@
           </params>
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [$ 91,804.00] but found ["$"91,804.00]]]>
+              <![CDATA[expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [$ 91,804.00] but found ["$"91,804.00]
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:93)
 	at org.testng.Assert.failNotEquals(Assert.java:512)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:134)
-	at org.testng.Assert.assertEquals(Assert.java:115)
-	at org.testng.Assert.assertEquals(Assert.java:189)
-	at org.testng.Assert.assertEquals(Assert.java:199)
-	at com.Parking_pages.Parking_Calculator.dataDrivenTest(Parking_Calculator.java:57)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.Assert.assertTrue(Assert.java:41)
+	at org.testng.Assert.assertTrue(Assert.java:51)
+	at com.ParkingLibrary.GlobalSeleniumLibrary.selectDropDownVisibleText(GlobalSeleniumLibrary.java:505)
+	at com.Parking_pages.Parking_Calculator.dataDrivenTest(Parking_Calculator.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
 	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
@@ -96,26 +95,26 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dataDrivenTest -->
-        <test-method is-config="true" signature="afterEachTestEnd(org.testng.ITestResult)[pri:0, instance:com.Parking_pages.Parking_Calculator@576d5deb]" started-at="2019-02-15T12:35:16Z" name="afterEachTestEnd" finished-at="2019-02-15T12:35:19Z" duration-ms="3581" status="PASS">
+        <test-method status="PASS" signature="afterEachTestEnd(org.testng.ITestResult)[pri:0, instance:com.Parking_pages.Parking_Calculator@731a74c]" name="afterEachTestEnd" is-config="true" duration-ms="3952" started-at="2019-02-20T11:41:48Z" finished-at="2019-02-20T11:41:52Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=dataDrivenTest status=FAILURE method=Parking_Calculator.dataDrivenTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.Parking_pages.Parking_Calculator@576d5deb] output={null}]]]>
+                <![CDATA[[TestResult name=dataDrivenTest status=FAILURE method=Parking_Calculator.dataDrivenTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.Parking_pages.Parking_Calculator@731a74c] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterEachTestEnd -->
-        <test-method is-config="true" signature="beforeEachTestStart()[pri:0, instance:com.Parking_pages.Parking_Calculator@576d5deb]" started-at="2019-02-15T12:35:19Z" name="beforeEachTestStart" finished-at="2019-02-15T12:35:23Z" duration-ms="3518" status="PASS">
+        <test-method status="PASS" signature="beforeEachTestStart()[pri:0, instance:com.Parking_pages.Parking_Calculator@731a74c]" name="beforeEachTestStart" is-config="true" duration-ms="3461" started-at="2019-02-20T11:41:52Z" finished-at="2019-02-20T11:41:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeEachTestStart -->
-        <test-method is-config="true" signature="parking_Calculator()[pri:0, instance:com.Parking_pages.Parking_Calculator@576d5deb]" started-at="2019-02-15T12:35:23Z" name="parking_Calculator" finished-at="2019-02-15T12:35:23Z" duration-ms="617" status="PASS">
+        <test-method status="PASS" signature="parking_Calculator()[pri:0, instance:com.Parking_pages.Parking_Calculator@731a74c]" name="parking_Calculator" is-config="true" duration-ms="828" started-at="2019-02-20T11:41:56Z" finished-at="2019-02-20T11:41:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- parking_Calculator -->
-        <test-method signature="dataDrivenTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.Parking_pages.Parking_Calculator@576d5deb]" started-at="2019-02-15T12:35:23Z" name="dataDrivenTest" data-provider="parkingcalculator" finished-at="2019-02-15T12:35:25Z" duration-ms="1158" status="FAIL">
+        <test-method status="FAIL" signature="dataDrivenTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.Parking_pages.Parking_Calculator@731a74c]" name="dataDrivenTest" duration-ms="1075" started-at="2019-02-20T11:41:56Z" data-provider="parkingcalculator" finished-at="2019-02-20T11:41:57Z">
           <params>
             <param index="0">
               <value>
@@ -160,11 +159,11 @@
 	at org.testng.Assert.assertEquals(Assert.java:115)
 	at org.testng.Assert.assertEquals(Assert.java:189)
 	at org.testng.Assert.assertEquals(Assert.java:199)
-	at com.Parking_pages.Parking_Calculator.dataDrivenTest(Parking_Calculator.java:57)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at com.Parking_pages.Parking_Calculator.dataDrivenTest(Parking_Calculator.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
 	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
@@ -192,26 +191,26 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dataDrivenTest -->
-        <test-method is-config="true" signature="afterEachTestEnd(org.testng.ITestResult)[pri:0, instance:com.Parking_pages.Parking_Calculator@576d5deb]" started-at="2019-02-15T12:35:25Z" name="afterEachTestEnd" finished-at="2019-02-15T12:35:28Z" duration-ms="3228" status="PASS">
+        <test-method status="PASS" signature="afterEachTestEnd(org.testng.ITestResult)[pri:0, instance:com.Parking_pages.Parking_Calculator@731a74c]" name="afterEachTestEnd" is-config="true" duration-ms="3351" started-at="2019-02-20T11:41:57Z" finished-at="2019-02-20T11:42:01Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=dataDrivenTest status=FAILURE method=Parking_Calculator.dataDrivenTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.Parking_pages.Parking_Calculator@576d5deb] output={null}]]]>
+                <![CDATA[[TestResult name=dataDrivenTest status=FAILURE method=Parking_Calculator.dataDrivenTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.Parking_pages.Parking_Calculator@731a74c] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterEachTestEnd -->
-        <test-method is-config="true" signature="beforeEachTestStart()[pri:0, instance:com.Parking_pages.Parking_Calculator@576d5deb]" started-at="2019-02-15T12:35:28Z" name="beforeEachTestStart" finished-at="2019-02-15T12:35:31Z" duration-ms="3484" status="PASS">
+        <test-method status="PASS" signature="beforeEachTestStart()[pri:0, instance:com.Parking_pages.Parking_Calculator@731a74c]" name="beforeEachTestStart" is-config="true" duration-ms="3440" started-at="2019-02-20T11:42:01Z" finished-at="2019-02-20T11:42:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeEachTestStart -->
-        <test-method is-config="true" signature="parking_Calculator()[pri:0, instance:com.Parking_pages.Parking_Calculator@576d5deb]" started-at="2019-02-15T12:35:31Z" name="parking_Calculator" finished-at="2019-02-15T12:35:32Z" duration-ms="788" status="PASS">
+        <test-method status="PASS" signature="parking_Calculator()[pri:0, instance:com.Parking_pages.Parking_Calculator@731a74c]" name="parking_Calculator" is-config="true" duration-ms="976" started-at="2019-02-20T11:42:04Z" finished-at="2019-02-20T11:42:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- parking_Calculator -->
-        <test-method signature="dataDrivenTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.Parking_pages.Parking_Calculator@576d5deb]" started-at="2019-02-15T12:35:32Z" name="dataDrivenTest" data-provider="parkingcalculator" finished-at="2019-02-15T12:35:33Z" duration-ms="1250" status="FAIL">
+        <test-method status="FAIL" signature="dataDrivenTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.Parking_pages.Parking_Calculator@731a74c]" name="dataDrivenTest" duration-ms="1084" started-at="2019-02-20T11:42:05Z" data-provider="parkingcalculator" finished-at="2019-02-20T11:42:06Z">
           <params>
             <param index="0">
               <value>
@@ -256,11 +255,11 @@
 	at org.testng.Assert.assertEquals(Assert.java:115)
 	at org.testng.Assert.assertEquals(Assert.java:189)
 	at org.testng.Assert.assertEquals(Assert.java:199)
-	at com.Parking_pages.Parking_Calculator.dataDrivenTest(Parking_Calculator.java:57)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at com.Parking_pages.Parking_Calculator.dataDrivenTest(Parking_Calculator.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
 	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
@@ -288,26 +287,26 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dataDrivenTest -->
-        <test-method is-config="true" signature="afterEachTestEnd(org.testng.ITestResult)[pri:0, instance:com.Parking_pages.Parking_Calculator@576d5deb]" started-at="2019-02-15T12:35:33Z" name="afterEachTestEnd" finished-at="2019-02-15T12:35:37Z" duration-ms="3266" status="PASS">
+        <test-method status="PASS" signature="afterEachTestEnd(org.testng.ITestResult)[pri:0, instance:com.Parking_pages.Parking_Calculator@731a74c]" name="afterEachTestEnd" is-config="true" duration-ms="3251" started-at="2019-02-20T11:42:06Z" finished-at="2019-02-20T11:42:10Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=dataDrivenTest status=FAILURE method=Parking_Calculator.dataDrivenTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.Parking_pages.Parking_Calculator@576d5deb] output={null}]]]>
+                <![CDATA[[TestResult name=dataDrivenTest status=FAILURE method=Parking_Calculator.dataDrivenTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.Parking_pages.Parking_Calculator@731a74c] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterEachTestEnd -->
-        <test-method is-config="true" signature="beforeEachTestStart()[pri:0, instance:com.Parking_pages.Parking_Calculator@576d5deb]" started-at="2019-02-15T12:35:37Z" name="beforeEachTestStart" finished-at="2019-02-15T12:35:40Z" duration-ms="3503" status="PASS">
+        <test-method status="PASS" signature="beforeEachTestStart()[pri:0, instance:com.Parking_pages.Parking_Calculator@731a74c]" name="beforeEachTestStart" is-config="true" duration-ms="3539" started-at="2019-02-20T11:42:10Z" finished-at="2019-02-20T11:42:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeEachTestStart -->
-        <test-method is-config="true" signature="parking_Calculator()[pri:0, instance:com.Parking_pages.Parking_Calculator@576d5deb]" started-at="2019-02-15T12:35:40Z" name="parking_Calculator" finished-at="2019-02-15T12:35:41Z" duration-ms="580" status="PASS">
+        <test-method status="PASS" signature="parking_Calculator()[pri:0, instance:com.Parking_pages.Parking_Calculator@731a74c]" name="parking_Calculator" is-config="true" duration-ms="831" started-at="2019-02-20T11:42:13Z" finished-at="2019-02-20T11:42:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- parking_Calculator -->
-        <test-method signature="dataDrivenTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.Parking_pages.Parking_Calculator@576d5deb]" started-at="2019-02-15T12:35:41Z" name="dataDrivenTest" data-provider="parkingcalculator" finished-at="2019-02-15T12:35:42Z" duration-ms="1136" status="FAIL">
+        <test-method status="FAIL" signature="dataDrivenTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.Parking_pages.Parking_Calculator@731a74c]" name="dataDrivenTest" duration-ms="246" started-at="2019-02-20T11:42:14Z" data-provider="parkingcalculator" finished-at="2019-02-20T11:42:14Z">
           <params>
             <param index="0">
               <value>
@@ -342,21 +341,20 @@
           </params>
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [$ 122,400.00] but found ["$"122,400.00]]]>
+              <![CDATA[expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [$ 122,400.00] but found ["$"122,400.00]
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:93)
 	at org.testng.Assert.failNotEquals(Assert.java:512)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:134)
-	at org.testng.Assert.assertEquals(Assert.java:115)
-	at org.testng.Assert.assertEquals(Assert.java:189)
-	at org.testng.Assert.assertEquals(Assert.java:199)
-	at com.Parking_pages.Parking_Calculator.dataDrivenTest(Parking_Calculator.java:57)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.Assert.assertTrue(Assert.java:41)
+	at org.testng.Assert.assertTrue(Assert.java:51)
+	at com.ParkingLibrary.GlobalSeleniumLibrary.enterTextField(GlobalSeleniumLibrary.java:77)
+	at com.Parking_pages.Parking_Calculator.dataDrivenTest(Parking_Calculator.java:49)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
 	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
@@ -384,151 +382,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dataDrivenTest -->
-        <test-method is-config="true" signature="afterEachTestEnd(org.testng.ITestResult)[pri:0, instance:com.Parking_pages.Parking_Calculator@576d5deb]" started-at="2019-02-15T12:35:42Z" name="afterEachTestEnd" finished-at="2019-02-15T12:35:45Z" duration-ms="3248" status="PASS">
+        <test-method status="FAIL" signature="afterEachTestEnd(org.testng.ITestResult)[pri:0, instance:com.Parking_pages.Parking_Calculator@731a74c]" name="afterEachTestEnd" is-config="true" duration-ms="28" started-at="2019-02-20T11:42:14Z" finished-at="2019-02-20T11:42:14Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=dataDrivenTest status=FAILURE method=Parking_Calculator.dataDrivenTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.Parking_pages.Parking_Calculator@576d5deb] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterEachTestEnd -->
-        <test-method is-config="true" signature="beforeEachTestStart()[pri:0, instance:com.Parking_pages.Parking_Calculator@576d5deb]" started-at="2019-02-15T12:35:45Z" name="beforeEachTestStart" finished-at="2019-02-15T12:35:49Z" duration-ms="3392" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeEachTestStart -->
-        <test-method is-config="true" signature="parking_Calculator()[pri:0, instance:com.Parking_pages.Parking_Calculator@576d5deb]" started-at="2019-02-15T12:35:49Z" name="parking_Calculator" finished-at="2019-02-15T12:35:49Z" duration-ms="618" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- parking_Calculator -->
-        <test-method signature="dataDrivenTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.Parking_pages.Parking_Calculator@576d5deb]" started-at="2019-02-15T12:35:49Z" name="dataDrivenTest" data-provider="parkingcalculator" finished-at="2019-02-15T12:35:50Z" duration-ms="1228" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Valet Parking]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[5:00]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[6/29/86]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[6:00]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[1/26/19]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA["$"4,356,982.00]]>
-              </value>
-            </param>
-          </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [$ 356,982.00] but found ["$"4,356,982.00]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [$ 356,982.00] but found ["$"4,356,982.00]
-	at org.testng.Assert.fail(Assert.java:93)
-	at org.testng.Assert.failNotEquals(Assert.java:512)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:134)
-	at org.testng.Assert.assertEquals(Assert.java:115)
-	at org.testng.Assert.assertEquals(Assert.java:189)
-	at org.testng.Assert.assertEquals(Assert.java:199)
-	at com.Parking_pages.Parking_Calculator.dataDrivenTest(Parking_Calculator.java:57)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dataDrivenTest -->
-        <test-method is-config="true" signature="afterEachTestEnd(org.testng.ITestResult)[pri:0, instance:com.Parking_pages.Parking_Calculator@576d5deb]" started-at="2019-02-15T12:35:50Z" name="afterEachTestEnd" finished-at="2019-02-15T12:35:54Z" duration-ms="3317" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=dataDrivenTest status=FAILURE method=Parking_Calculator.dataDrivenTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.Parking_pages.Parking_Calculator@576d5deb] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterEachTestEnd -->
-        <test-method is-config="true" signature="beforeEachTestStart()[pri:0, instance:com.Parking_pages.Parking_Calculator@576d5deb]" started-at="2019-02-15T12:35:54Z" name="beforeEachTestStart" finished-at="2019-02-15T12:35:57Z" duration-ms="3495" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeEachTestStart -->
-        <test-method is-config="true" signature="parking_Calculator()[pri:0, instance:com.Parking_pages.Parking_Calculator@576d5deb]" started-at="2019-02-15T12:35:57Z" name="parking_Calculator" finished-at="2019-02-15T12:35:58Z" duration-ms="590" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- parking_Calculator -->
-        <test-method signature="dataDrivenTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.Parking_pages.Parking_Calculator@576d5deb]" started-at="2019-02-15T12:35:58Z" name="dataDrivenTest" data-provider="parkingcalculator" finished-at="2019-02-15T12:36:28Z" duration-ms="30130" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[]]>
+                <![CDATA[[TestResult name=dataDrivenTest status=FAILURE method=Parking_Calculator.dataDrivenTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.Parking_pages.Parking_Calculator@731a74c] output={null}]]]>
               </value>
             </param>
           </params>
@@ -542,14 +400,70 @@
 	at org.testng.Assert.failNotEquals(Assert.java:512)
 	at org.testng.Assert.assertTrue(Assert.java:41)
 	at org.testng.Assert.assertTrue(Assert.java:51)
-	at com.ParkingLibrary.GlobalSeleniumLibrary.selectDropDownVisibleText(GlobalSeleniumLibrary.java:505)
-	at com.Parking_pages.Parking_Calculator.dataDrivenTest(Parking_Calculator.java:47)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at com.ParkingLibrary.GlobalSeleniumLibrary.captureScreenshot(GlobalSeleniumLibrary.java:396)
+	at com.ParkingLibrary.Base.afterEachTestEnd(Base.java:44)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:723)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterEachTestEnd -->
+        <test-method status="SKIP" signature="beforeEachTestStart()[pri:0, instance:com.Parking_pages.Parking_Calculator@731a74c]" name="beforeEachTestStart" is-config="true" duration-ms="0" started-at="2019-02-20T11:42:14Z" finished-at="2019-02-20T11:42:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeEachTestStart -->
+        <test-method status="SKIP" signature="parking_Calculator()[pri:0, instance:com.Parking_pages.Parking_Calculator@731a74c]" name="parking_Calculator" is-config="true" duration-ms="0" started-at="2019-02-20T11:42:14Z" finished-at="2019-02-20T11:42:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- parking_Calculator -->
+        <test-method status="SKIP" signature="dataDrivenTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.Parking_pages.Parking_Calculator@731a74c]" name="dataDrivenTest" duration-ms="0" started-at="2019-02-20T11:42:14Z" data-provider="parkingcalculator" finished-at="2019-02-20T11:42:14Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertTrue(Assert.java:41)
+	at org.testng.Assert.assertTrue(Assert.java:51)
+	at com.ParkingLibrary.GlobalSeleniumLibrary.captureScreenshot(GlobalSeleniumLibrary.java:396)
+	at com.ParkingLibrary.Base.afterEachTestEnd(Base.java:44)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:723)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
@@ -575,18 +489,61 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- dataDrivenTest -->
-        <test-method is-config="true" signature="afterEachTestEnd(org.testng.ITestResult)[pri:0, instance:com.Parking_pages.Parking_Calculator@576d5deb]" started-at="2019-02-15T12:36:28Z" name="afterEachTestEnd" finished-at="2019-02-15T12:36:31Z" duration-ms="3337" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=dataDrivenTest status=FAILURE method=Parking_Calculator.dataDrivenTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.Parking_pages.Parking_Calculator@576d5deb] output={null}]]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="SKIP" signature="beforeEachTestStart()[pri:0, instance:com.Parking_pages.Parking_Calculator@731a74c]" name="beforeEachTestStart" is-config="true" duration-ms="0" started-at="2019-02-20T11:42:14Z" finished-at="2019-02-20T11:42:14Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterEachTestEnd -->
-        <test-method is-config="true" signature="afterAllTestCompleted()[pri:0, instance:com.Parking_pages.Parking_Calculator@576d5deb]" started-at="2019-02-15T12:36:31Z" name="afterAllTestCompleted" finished-at="2019-02-15T12:36:31Z" duration-ms="1" status="PASS">
+        </test-method> <!-- beforeEachTestStart -->
+        <test-method status="SKIP" signature="parking_Calculator()[pri:0, instance:com.Parking_pages.Parking_Calculator@731a74c]" name="parking_Calculator" is-config="true" duration-ms="0" started-at="2019-02-20T11:42:14Z" finished-at="2019-02-20T11:42:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- parking_Calculator -->
+        <test-method status="SKIP" signature="dataDrivenTest(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.Parking_pages.Parking_Calculator@731a74c]" name="dataDrivenTest" duration-ms="0" started-at="2019-02-20T11:42:14Z" data-provider="parkingcalculator" finished-at="2019-02-20T11:42:14Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:93)
+	at org.testng.Assert.failNotEquals(Assert.java:512)
+	at org.testng.Assert.assertTrue(Assert.java:41)
+	at org.testng.Assert.assertTrue(Assert.java:51)
+	at com.ParkingLibrary.GlobalSeleniumLibrary.captureScreenshot(GlobalSeleniumLibrary.java:396)
+	at com.ParkingLibrary.Base.afterEachTestEnd(Base.java:44)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:723)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dataDrivenTest -->
+        <test-method status="SKIP" signature="afterAllTestCompleted()[pri:0, instance:com.Parking_pages.Parking_Calculator@731a74c]" name="afterAllTestCompleted" is-config="true" duration-ms="0" started-at="2019-02-20T11:42:14Z" finished-at="2019-02-20T11:42:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterAllTestCompleted -->

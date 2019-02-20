@@ -51,6 +51,7 @@ public class Parking_Calculator extends Base {
 			myRepository.clickButton(By.id("ExitTime"));
 			myRepository.enterTextField(By.id("ExitDate"), xDate);
 			myRepository.clickButton(By.cssSelector("input[name=Submit]"));
+			
 			WebElement amountVerfing = driver.findElement(By.cssSelector("span[class='SubHead']"));
 			String totalCostIs = amountVerfing.getText();
 			System.out.println("Test Senario:" +counter+ ", Total Parking Amount is:"+totalCostIs);
