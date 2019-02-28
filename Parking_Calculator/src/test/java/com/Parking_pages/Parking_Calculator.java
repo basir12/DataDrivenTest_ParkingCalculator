@@ -14,7 +14,7 @@ import com.ParkingLibrary.ExcelManager;
 public class Parking_Calculator extends Base {
 	private int counter = 0;
 
-	@DataProvider(name = "parkingcalculator")
+	@DataProvider(name = "ParkingCalculator_DDT")
 	private Object[][] parkingcalculator() {
 
 		ExcelManager excelReader = new ExcelManager("src\\test\\resources\\Data\\ParkingCalculator_DDT.xls");
@@ -38,8 +38,8 @@ public class Parking_Calculator extends Base {
 		}
 	}
 
-	@Test(dataProvider = "parkingcalculator")
-	public void dataDrivenTest(String lot, String eTime, String eDate, String xTime, String xDate, String actuleExpacted) {
+	@Test(dataProvider = "ParkingCalculator_DDT")
+	public void dataDrivenTest(String lot, String eTime, String eDate, String xTime, String xDate, String Expacted) {
 
 		try {  
 
@@ -55,7 +55,7 @@ public class Parking_Calculator extends Base {
 			WebElement amountVerfing = driver.findElement(By.cssSelector("span[class='SubHead']"));
 			String totalCostIs = amountVerfing.getText();
 			System.out.println("Test Senario:" +counter+ ", Total Parking Amount is:"+totalCostIs);
-			assertEquals(actuleExpacted, totalCostIs);
+			assertEquals(Expacted, totalCostIs);
 
 			Thread.sleep(2000);
 
