@@ -5,7 +5,7 @@
     <classes>
       <class name="com.Parking_pages.Parking_Calculator">
         <methods>
-          <include name="dataDrivenTest" invocation-numbers="0 1 2 3"/>
+          <include name="dataDrivenTest"/>
           <include name="beforeAllTestStart"/>
           <include name="beforeEachTestStart"/>
           <include name="parking_Calculator"/>

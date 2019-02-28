@@ -93,11 +93,6 @@ public class ExcelManager {
 		return arrayExcelData;
 	}
 
-	public static void main(String[] args) {
-		ExcelManager excelM = new ExcelManager("C:/Users/aboba/testExcelData1.xlsx");
-		excelM.setExcelFile("page1");
-		excelM.setCellData("I love programing", 1, 1);
-		System.out.println("File is crated.");
-	}
+
 
 }
